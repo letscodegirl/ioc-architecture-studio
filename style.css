@@ -1,0 +1,46 @@
+
+/* ----------- Color Variables --------- */
+/* Looking for the color variables? They have been moved to the inline-styles file in the _includes folder, and pull variables from the site-settings folder in the _data folder.  */
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+
+html {
+  scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
+}
+
+body{
+  background-color: rgb(90,90,95);
+  color: rgb(60,60,65);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body > section{
+  position: relative;
+  padding: 4%
+}
+
+.example-block {
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width:100%;
+}
+a {
+  text-decoration: none;
+    color: inherit;
+}
+
+
