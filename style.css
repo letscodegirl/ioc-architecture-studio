@@ -7,15 +7,28 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components {
+
+  .img-overlay {
+    @apply absolute inset-0 h-full w-full object-cover object-center;
+  }
+
+}
+
 /* Custom CSS */
+
+:root {
+  --dark: #353535
+}
 
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
 
 body{
-  background-color: rgb(90,90,95);
-  color: rgb(60,60,65);
+  /* background-color: rgb(90,90,95);
+  color: rgb(60,60,65); */
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -38,9 +51,27 @@ body > section{
 img {
   max-width:100%;
 }
+
+body h2{
+  font-size: 3rem;
+}
+
+p{
+  text-align: justify;
+}
+
 a {
   text-decoration: none;
     color: inherit;
 }
 
+.vertical-text{
+  writing-mode:vertical-lr;
+  rotate:180deg;
+}
+
+.bg{
+  background-size: cover;
+  background-position: center;
+}
 

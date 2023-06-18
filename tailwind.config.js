@@ -52,6 +52,7 @@ module.exports = {
         '50': '50vh',
       },
       aspectRatio: {
+        'landscape-wide': '7 / 3',
         'landscape': '3 / 2',
         'portrait-tall': '5/8',
         'portrait': '4/5',
