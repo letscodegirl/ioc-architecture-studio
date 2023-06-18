@@ -432,17 +432,72 @@ video {
 .right-5p {
   right: 5%;
 }
+.bottom-5p {
+  bottom: 5%;
+}
 .top-0 {
   top: 0px;
+}
+.top-6 {
+  top: 1.5rem;
+}
+.right-6 {
+  right: 1.5rem;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.right-0 {
+  right: 0px;
+}
+.bottom-8 {
+  bottom: 2rem;
+}
+.right-8 {
+  right: 2rem;
 }
 .z-50 {
   z-index: 50;
 }
-.mt-4 {
-  margin-top: 1rem;
+.z-20 {
+  z-index: 20;
+}
+.z-10 {
+  z-index: 10;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-0 {
+  margin-bottom: 0px;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.mt-\[1\.2rem\] {
+  margin-top: 1.2rem;
+}
+.ml-4 {
+  margin-left: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .ml-auto {
   margin-left: auto;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -450,33 +505,96 @@ video {
 .grid {
   display: grid;
 }
+.hidden {
+  display: none;
+}
 .aspect-landscape-wide {
   aspect-ratio: 7 / 3;
+}
+.aspect-\[2\/3\] {
+  aspect-ratio: 2/3;
+}
+.h-12 {
+  height: 3rem;
 }
 .h-8 {
   height: 2rem;
 }
+.h-16 {
+  height: 4rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
 .min-h-90 {
   min-height: 90vh;
+}
+.min-h-100 {
+  min-height: 100vh;
+}
+.w-12 {
+  width: 3rem;
 }
 .w-8 {
   width: 2rem;
 }
-.max-w-screen-lg {
-  max-width: 1024px;
+.w-16 {
+  width: 4rem;
+}
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+.w-1 {
+  width: 0.25rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.w-\[150\%\] {
+  width: 150%;
+}
+.max-w-screen-2xl {
+  max-width: 1536px;
+}
+.max-w-\[12rem\] {
+  max-width: 12rem;
+}
+.max-w-\[3rem\] {
+  max-width: 3rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 .grow {
   flex-grow: 1;
 }
-.columns-2 {
-  -moz-columns: 2;
-       columns: 2;
+.list-inside {
+  list-style-position: inside;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.items-start {
+  align-items: flex-start;
 }
 .items-end {
   align-items: flex-end;
 }
 .items-center {
   align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.justify-start {
+  justify-content: flex-start;
 }
 .justify-center {
   justify-content: center;
@@ -487,11 +605,21 @@ video {
 .gap-8 {
   gap: 2rem;
 }
+.gap-4 {
+  gap: 1rem;
+}
+.gap-x-\[4vw\] {
+  -moz-column-gap: 4vw;
+       column-gap: 4vw;
+}
+.gap-y-\[10vw\] {
+  row-gap: 10vw;
+}
+.gap-y-16 {
+  row-gap: 4rem;
+}
 .rounded-full {
   border-radius: 9999px;
-}
-.border-b {
-  border-bottom-width: 1px;
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -500,6 +628,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-\[var\(--dark\)\] {
   background-color: var(--dark);
@@ -510,28 +642,64 @@ video {
 .bg-center {
   background-position: center;
 }
-.p-5p {
-  padding: 5%;
-}
-.p-2 {
-  padding: 0.5rem;
-}
 .p-8 {
   padding: 2rem;
 }
 .p-4 {
   padding: 1rem;
 }
+.px-5p {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .pb-5p {
   padding-bottom: 5%;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
+.pb-\[50\%\] {
+  padding-bottom: 50%;
+}
+.text-right {
+  text-align: right;
+}
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+.text-sm {
+  font-size: 0.875rem;;
+  line-height: 1.2;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-bold {
+  font-weight: 700;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 /* Custom CSS */
@@ -550,9 +718,9 @@ body{
     font-family: 'Nunito Sans', sans-serif;
 }
 
-body > section{
+body > section, body footer{
   position: relative;
-  padding: 4%
+  padding: 5%
 }
 
 .example-block {
@@ -566,21 +734,54 @@ body > section{
   box-sizing: border-box;
 }
 
-img {
+img,svg {
   max-width:100%;
 }
 
 body h2{
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bolder;
+  margin-bottom: .5em;
+  line-height: 1;
 }
 
 p{
   text-align: justify;
+  margin-bottom: .5em;
+}
+:is(h1,h2,h3,h4,h5,h6,p):last-child{
+  margin-bottom: 0;
 }
 
 a {
   text-decoration: none;
     color: inherit;
+}
+
+header a{
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+}
+
+.doted-nav a::after{
+content: " ";
+position: absolute;
+bottom: -10px;
+left: calc(50% - 2px);
+width: 6px;
+height: 6px;
+border: 1px solid;
+border-radius: 100px;
+background-color: black;
+}
+
+.doted-nav a:nth-child(2)::after{
+  background-color: #fff;
 }
 
 .vertical-text{
@@ -593,15 +794,62 @@ a {
   background-position: center;
 }
 
+.scary-grid{
+  grid-template-columns: min-content 1fr;
+}
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .md\:mt-32 {
+    margin-top: 8rem;
+  }
+  .md\:columns-2 {
+    -moz-columns: 2;
+         columns: 2;
   }
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:gap-32 {
+    gap: 8rem;
+  }
+  .md\:gap-16 {
+    gap: 4rem;
+  }
 }
 
+@media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.\[\&\>\:nth-child\(2n\+1\)\]\:aspect-\[2\/3\]>:nth-child(2n+1) {
+  aspect-ratio: 2/3;
+}
+
+.\[\&\>\:nth-child\(2n\+1\)\]\:aspect-\[3\/2\]>:nth-child(2n+1) {
+  aspect-ratio: 3/2;
+}
+
+.\[\&\>\:nth-child\(2n\)\]\:aspect-\[3\/2\]>:nth-child(2n) {
+  aspect-ratio: 3/2;
+}
+
+.\[\&\>\:nth-child\(2n\)\]\:aspect-\[2\/3\]>:nth-child(2n) {
+  aspect-ratio: 2/3;
+}

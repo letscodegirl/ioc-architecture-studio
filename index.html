@@ -1,79 +1,149 @@
 ---
 layout: default
+banner: true
 ---
 
-  <section class="grid md:grid-cols-3 gap-8">
-    <div class="flex">
-      <p class="vertical-text p-2">
-        baro architecture
-      </p>
-      <div class="grow bg" style="background-image: url('https://picsum.photos/id/1081/600/400');">
-  
+  <section class="">
+    <div class="grid  md:grid-cols-3 gap-8 max-w-screen-2xl mx-auto">
+      <div class="flex">
+        <p class="vertical-text px-2">
+          baro architecture
+        </p>
+        <div class="grow relative bg pb-[50%]" style="background-image: url('https://picsum.photos/id/1081/600/400');">
+          <div class="w-8 h-8 bg-white absolute inline-block rounded-full bottom-8 right-8"></div> 
+        </div>
       </div>
-    </div>
-    <div class="md:col-span-2 columns-2 gap-8">
-      <h2>lorem</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
-        eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
-        eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
-        eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem ipsa voluptate, earum fugiat voluptatum in, soluta possimus aspernatur facere voluptatibus reiciendis, sit nesciunt pariatur iste quae ipsum perspiciatis culpa.
-      </p>
-      <img src="/images/arrow.png" class="mt-4 ml-auto" alt="arrow">
+      <div class="md:col-span-2 md:columns-2 gap-8">
+        <h2 class="mb-0">Barō -</h2>
+        <h3>Beyond the design</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
+          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
+          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
+          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem ipsa voluptate, earum fugiat voluptatum in, soluta possimus aspernatur facere voluptatibus reiciendis, sit nesciunt pariatur iste quae ipsum perspiciatis culpa.
+        </p>
+        <div class="mt-8 ml-auto w-min">
+          <a href="#">
+            {% include arrow.html color='#000' %}
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
 
   <section class="bg-[var(--dark)] text-white">
-    <div class="grid md:grid-cols-2 items-end pb-5p ">
+    <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
+      {% for prop in site.property limit:1 %}
       <div class="">
-        <h2>Smith
-        House</h2>
+        <h2 class="w-1">{{prop.title}}</h2>
       </div>
       
       <div>
         <h3>Brief</h3>  
-        <div class="columns-2 gap-8">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsam quaerat temporibus</p>
+        <div class="md:columns-2 gap-8">
+          <p>{{prop.brief}}</p>
         </div>
       </div>
     </div>
     <div class="aspect-landscape-wide relative">
-      <img src="https://picsum.photos/id/743/600/400" alt="building" class="img-overlay">
+      <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
+      <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full">
+      </div>
     </div>
-    <div class="flex gap-8 py-8">
-      <div >
+    <div class="flex gap-8 py-8 items-center">
+      <div>
         <h3>
           Date
         </h3>
-        <p>27 may 2023</p>
+        <p class="font-light text-sm">{{prop.date | date_to_string}}</p>
       </div>
       <div>
         <h3>
           Cotractor
         </h3>
-        <p>27 may 2023</p>
+        <p class="font-light text-sm">{{prop.contractor}}</p>
       </div>
       <div>
         <h3>Principle Architect
         </h3>
-        <p>27 may 2023</p>
+        <p class="font-light text-sm">{{prop.architect}}</p>
       </div>
-      <div class="grow">
-        <img src="images/arrow-white.png" alt="arrow" class="ml-auto">
+      <div class="flex-1"></div>
+      <div>
+        <a href="{{prop.url}}">
+          {% include arrow.html color='#fff' %}
+        </a>
       </div>
     </div>
+    {% endfor %}
     
   </section>
 
-  <section>
-    
-    <div>
-    <h2></h2>
+  <section class="">
+    <div class="grid md:grid-cols-2 pb-5p md:gap-16 max-w-screen-2xl mx-auto">
+      {% assign featured = site.property | where:'featured','true' %}
+      {% for prop in featured limit:1 %}
+      <div class="">
+        <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10">Featured property</h2>
+        <h3>{{prop.title}}</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident rem voluptatum enim. Assumenda officia quam commodi praesentium corporis est quos natus dolores eveniet suscipit animi, quas blanditiis, possimus ab iste.
+        </p>
+        <div class="flex items-center justify-between">
+          <span class="font-bold">see it</span>
+          {% include arrow.html color='#000' %}
+        </div>
+        <div class="text-right">
+          <h3 class="mb-0">
+            Date
+          </h3>
+          <span>{{prop.date | date_to_string}}</span>
+          <h3 class="mb-0">
+            Cotractor
+          </h3>
+          <span>{{prop.contractor}}</span>
+          <h3 class="mb-0">
+            Principle Architect
+          </h3>
+          <span>{{prop.architect}}</span>
+
+        </div>
+        
+      </div>
+      <div class="mt-8 md:mt-32 flex items-stretch">
+        <div class="grow bg-cover bg-center pb-[50%]" style="background-image: url('{{prop.featured_image}}');"></div>
+        <p class="vertical-text px-4">Barō Architecture</p>
+      </div>
+    {% endfor %}
     </div>
+  </section>
+
+
+  <section class="bg-[var(--dark)] text-white">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 pb-5p gap-8 md:gap-16 max-w-screen-2xl mx-auto">
+        <div class="flex items-start gap-4">
+          <div class="w-16 h-16 bg-white rounded-full mt-[1.2rem] hidden sm:block"></div>
+          <div class="flex-1">
+            <h2 class="">
+              Beyond the design
+            </h2>
+            <div class="flex items-center gap-4">
+              <p class="mb-0">Contact us</p>
+              <div class="flex-1 text-right">
+                {% include arrow.html color='#fff' %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
+        </div>
+      </div>
   </section>

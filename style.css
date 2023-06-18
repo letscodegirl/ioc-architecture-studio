@@ -32,9 +32,9 @@ body{
     font-family: 'Nunito Sans', sans-serif;
 }
 
-body > section{
+body > section, body footer{
   position: relative;
-  padding: 4%
+  padding: 5%
 }
 
 .example-block {
@@ -48,21 +48,54 @@ body > section{
   box-sizing: border-box;
 }
 
-img {
+img,svg {
   max-width:100%;
 }
 
 body h2{
-  font-size: 3rem;
+  font-size: 4rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bolder;
+  margin-bottom: .5em;
+  line-height: 1;
 }
 
 p{
   text-align: justify;
+  margin-bottom: .5em;
+}
+:is(h1,h2,h3,h4,h5,h6,p):last-child{
+  margin-bottom: 0;
 }
 
 a {
   text-decoration: none;
     color: inherit;
+}
+
+header a{
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  display: inline-block;
+  position: relative;
+}
+
+.doted-nav a::after{
+content: " ";
+position: absolute;
+bottom: -10px;
+left: calc(50% - 2px);
+width: 6px;
+height: 6px;
+border: 1px solid;
+border-radius: 100px;
+background-color: black;
+}
+
+.doted-nav a:nth-child(2)::after{
+  background-color: #fff;
 }
 
 .vertical-text{
@@ -75,3 +108,6 @@ a {
   background-position: center;
 }
 
+.scary-grid{
+  grid-template-columns: min-content 1fr;
+}

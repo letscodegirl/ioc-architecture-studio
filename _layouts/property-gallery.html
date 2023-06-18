@@ -1,0 +1,126 @@
+---
+layout: default
+---
+<section class="">
+    <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
+      <div class="">
+        <h2 class="w-1">{{page.title}}</h2>
+      </div>
+      
+      <div>
+        <h3>Brief</h3>  
+        <div class="md:columns-2 gap-8">
+          <p>{{page.brief}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="aspect-landscape-wide relative">
+      <img src="{{page.featured_image}}" alt="building" class="img-overlay">
+      <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full z-20">
+    </div>
+    </div>
+    </div>
+    <div class="flex gap-8 py-8 items-center">
+      <div>
+        <h3>
+          Date
+        </h3>
+        <p class="font-light text-sm">{{page.date | date_to_string}}</p>
+      </div>
+      <div>
+        <h3>
+          Cotractor
+        </h3>
+        <p class="font-light text-sm">{{page.contractor}}</p>
+      </div>
+      <div>
+        <h3>Principle Architect
+        </h3>
+        <p class="font-light text-sm">{{page.architect}}</p>
+      </div>
+      </div>
+    </div>
+    
+</section>
+
+<section>
+    <div class="grid md:grid-cols-3 pb-5p gap-8 md:gap-32 max-w-screen-2xl mx-auto items-start">
+        <div class="md:col-span-2">
+            <h3>
+                Breif Cont.
+            </h3>
+            <p class="md:columns-2 gap-8 col-span-2">
+                {{page.breif_continue}}
+            </p>
+        </div>
+        <div class="">
+            <h3>
+                Specifications
+            </h3>
+            <ul class="list-disc list-inside">
+                {% for item in page.specifications %}
+                    <li>{{item}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="grid md:grid-cols-3 pb-5p gap-x-[4vw] max-w-screen-2xl mx-auto items-center relative">
+        <div class="[&>:nth-child(2n+1)]:aspect-[2/3] [&>:nth-child(2n)]:aspect-[3/2] grid gap-y-[10vw]">
+            {% for img in page.gallery limit: 3 %}
+            <div class="relative">
+                <img src="{{img}}" alt="building" class="img-overlay">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="[&>:nth-child(2n)]:aspect-[2/3] [&>:nth-child(2n+1)]:aspect-[3/2] grid gap-y-[10vw]">
+            {% for img in page.gallery limit:3 offset:3 %}
+            <div class=" relative">
+                <img src="{{img}}" alt="building" class="img-overlay">
+              </div>
+              {% endfor %}
+        </div>
+        <div class="grid gap-y-[10vw]">
+            {% for img in page.gallery limit:2 offset:6 %}
+            <div class="aspect-[2/3] relative">
+                <img src="{{img}}" alt="building" class="img-overlay">
+              </div>
+              {% endfor %}
+        </div>
+        <div class="absolute bottom-0 right-0">
+    <a href="#" class="flex items-center">
+        <span class="pr-4">
+            Full Gallery
+        </span>
+        {% include arrow.html color='#000' %}
+    </a>
+
+        </div>
+    </div>
+</section>
+
+<section class="bg-[var(--dark)] text-white">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 pb-5p gap-8 md:gap-16 max-w-screen-2xl mx-auto">
+        <div class="lg:col-span-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
+          </div>
+        <div class="flex items-start gap-4">
+          <div class="w-16 h-16 bg-white rounded-full mt-[1.2rem] hidden sm:block"></div>
+          <div class="flex-1">
+            <h2 class="">
+                See more of our portfolio
+            </h2>
+            <div class="flex items-center gap-4">
+              <p class="mb-0">Contact us</p>
+              <div class="flex-1 text-right">
+                {% include arrow.html color='#fff' %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section>

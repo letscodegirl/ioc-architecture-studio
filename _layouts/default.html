@@ -7,24 +7,26 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
+  {% if page.banner == true %}
   <section class="flex justify-center items-center bg-cover bg-center min-h-90" style="background-image: url(https://picsum.photos/id/1076/600/400);">
     <div class="text-white">
-      <h1>lorem</h1>
-      <h2>ipsum</h2>
+      <h1 class="text-9xl mb-0">Barō</h1>
+      <h3 class="text-right">Architecture</h3>
     </div>
-    <div class="absolute bg-white top-5p right-5p w-8 h-8 rounded-full">
-      
+    <div class="absolute bg-white top-5p right-5p w-12 h-12 rounded-full">
+    </div>
+    <div class="absolute bg-white bottom-5p left-[cacl(50% - 1rem)] w-8 h-8 rounded-full">
     </div>
   </section>
-  <header class="sticky top-0 p-5p bg-white border-b border-black z-50">
-    <div class="flex justify-between max-w-screen-lg">
-      <nav>
-        <a href="" class="logo">baro architecture</a>
+  {% endif %}
+  <header class="sticky top-0 px-5p p-8 bg-white border-black z-50">
+    <div class="flex justify-between max-w-screen-2xl mx-auto">
+      <nav class="flex justify-start items-center">
+        <div class="w-16 h-16 bg-black inline-block rounded-full"></div> <a href="" class="logo ml-2">Barō architecture</a>
       </nav>
-      <nav>
+      <nav class="flex items-start doted-nav">
         <a href="" class="p-4">about</a>
-        <a href="" class="p-4">portfolio</a>
+        <a href="" class="p-4">portfolio <span class="text-gray-500 block w-min">gallery</span></a>
         <a href="/contact" class="p-4">contact</a>
       </nav>
 
@@ -32,5 +34,57 @@
   </header>
 
   {{content}}
+
+  
+
+  <footer class="">
+    <div class="grid grid-cols-6 gap-8 pb-5p max-w-screen-2xl mx-auto items-center">
+    <div>
+      <h3>
+        Email
+      </h3>
+      <a href="mailto:hello@baro.com">hello@baro.com</a>
+      <h3>
+        Phone
+      </h3>
+      <a href="tel:62 786 548 769">+62 786 548 769</a>
+      <a href="tel:62 786 548 769">+62 786 548 769</a>
+      
+  </div>
+    <div>
+      <h3>
+        Address
+      </h3>
+      <p>
+        Barō Architecture
+      </p>
+      
+      <p>
+        100 Infinity Road, Pererenan, 39124 Indonesia
+      </p>
+        
+    </div>
+    <div class="md:col-span-2">
+      <div class="mx-auto max-w-[12rem]">
+        <img src="https://picsum.photos/id/318/600/400" alt="" class="">
+      </div>
+    </div>
+    <div>    
+      <h3>
+        links
+      </h3>
+      <a href="/">home</a>
+      <a href="/contact">contact</a>
+      <a href="/about">about</a>
+      <a href="/portfolio">portfolio</a>
+    </div>
+    <div>
+      <h3>
+        blog
+      </h3>
+      <a href="mailto:hello@baro.com">hello@baro.com</a>
+    </div>
+
+  </footer>
 </body>
 </html>

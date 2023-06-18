@@ -1,0 +1,58 @@
+---
+layout: default
+---
+{% for prop in site.property %}
+<section class=" {% cycle 
+    'bg-[var(--dark)] text-white',
+    '' %}
+    ">
+    <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
+      <div class="">
+        <h2 class="w-1">{{prop.title}}</h2>
+      </div>
+      
+      <div>
+        <h3>Brief</h3>  
+        <div class="md:columns-2 gap-8">
+          <p>{{prop.brief}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="aspect-landscape-wide relative">
+      <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
+      <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full z-20">
+    </div>
+    </div>
+    </div>
+    <div class="flex gap-8 py-8 items-center">
+      <div>
+        <h3>
+          Date
+        </h3>
+        <p class="font-light text-sm">{{prop.date | date_to_string}}</p>
+      </div>
+      <div>
+        <h3>
+          Cotractor
+        </h3>
+        <p class="font-light text-sm">{{prop.contractor}}</p>
+      </div>
+      <div>
+        <h3>Principle Architect
+        </h3>
+        <p class="font-light text-sm">{{prop.architect}}</p>
+      </div>
+      <div class="flex-1"></div>
+      <div>
+        <a href="{{prop.url}}">
+            <svg width="141" height="16" viewBox="0 0 141 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                <path d="M140.707 8.70709C141.098 8.31657 141.098 7.68341 140.707 7.29288L134.343 0.92892C133.953 0.538396 133.319 0.538396 132.929 0.928921C132.538 1.31944 132.538 1.95261 132.929 2.34313L138.586 7.99999L132.929 13.6568C132.538 14.0474 132.538 14.6805 132.929 15.0711C133.319 15.4616 133.953 15.4616 134.343 15.0711L140.707 8.70709ZM8.74228e-08 9L140 8.99999L140 6.99999L-8.74228e-08 7L8.74228e-08 9Z" fill="{% cycle 
+                    '#fff',
+                    '#000' %}"/>
+                </svg>
+        </a>
+      </div>
+    </div>
+    
+</section>
+{% endfor %}

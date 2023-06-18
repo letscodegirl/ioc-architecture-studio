@@ -1,0 +1,5 @@
+collections:
+  property:
+    output: true
+  property-gallery:
+    output: true 
