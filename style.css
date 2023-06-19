@@ -124,8 +124,8 @@ background-color: black;
 }
 
 .bouncing-animation{
-  background-color: aqua;
-  animation: bounce 1s ease-in-out 0 infinite alternate;
+  /* background-color: aqua; */
+  animation: bounce 1s ease-in-out infinite alternate;
 }
 
 @keyframes bounce {
