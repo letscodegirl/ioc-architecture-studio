@@ -19,7 +19,7 @@ layout: default
           <div class="w-8 h-8 flex-shrink-0 ml-4 bg-black inline-block rounded-full bottom-8 right-8"></div> 
         </div>
       </a>
-      <a href="{{prop.url}}" class="aspect-landscape-wide relative gsap-Trigger" style=" scale: .5;">
+      <a href="{{prop.url}}" class="aspect-landscape-wide relative gsap-Trigger" style=" scale: .5; filter: blur(1);">
         <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
       </a>
     {% endfor %}
@@ -45,10 +45,9 @@ layout: default
         marker: true
         
       })
-      .to(img, {scale: '1',
-    })
-      .to(img, {scale: '1',})
-      .to(img, {scale: '.5',})
+      .to(img, {scale: '1', filter: blur(0)})
+      .to(img, {scale: '1', filter: blur(0)})
+      .to(img, {scale: '.5',filter: blur(1)})
 
     })
 

@@ -111,3 +111,24 @@ background-color: black;
 .scary-grid{
   grid-template-columns: min-content 1fr;
 }
+
+/* burger menu */
+
+.burger-menu{
+  position: absolute;
+  right: 3rem;
+  display: flex;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.bouncing-animation{
+  background-color: aqua;
+  animation: bounce 1s ease-in-out 0 infinite alternate;
+}
+
+@keyframes bounce {
+  from {translate: 0 0;}
+  to { translate: 0 -1rem;}
+}

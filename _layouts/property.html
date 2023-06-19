@@ -70,21 +70,21 @@ layout: default
     <div class="grid md:grid-cols-3 pb-5p gap-x-[4vw] max-w-screen-2xl mx-auto items-center relative">
         <div class="[&>:nth-child(2n+1)]:aspect-[2/3] [&>:nth-child(2n)]:aspect-[3/2] grid gap-y-[10vw]">
             {% for img in page.gallery limit: 3 %}
-            <div class="relative">
+            <div class="relative hover-shrink">
                 <img src="{{img}}" alt="building" class="img-overlay">
             </div>
             {% endfor %}
         </div>
         <div class="[&>:nth-child(2n)]:aspect-[2/3] [&>:nth-child(2n+1)]:aspect-[3/2] grid gap-y-[10vw]">
             {% for img in page.gallery limit:3 offset:3 %}
-            <div class=" relative">
+            <div class=" relative hover-shrink">
                 <img src="{{img}}" alt="building" class="img-overlay">
               </div>
               {% endfor %}
         </div>
         <div class="grid gap-y-[10vw]">
             {% for img in page.gallery limit:2 offset:6 %}
-            <div class="aspect-[2/3] relative">
+            <div class="aspect-[2/3] relative hover-shrink">
                 <img src="{{img}}" alt="building" class="img-overlay">
               </div>
               {% endfor %}
@@ -124,3 +124,13 @@ layout: default
 
     </div>
   </section>
+  <!-- hover scale -->
+  <!-- images slowly contract when hover  -->
+<style>
+  .hover-shrink{
+    transition-duration: 2.5s;
+  }
+  .hover-shrink:hover{
+    scale: .9;
+  }
+</style>

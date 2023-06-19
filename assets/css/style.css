@@ -535,15 +535,15 @@ video {
 .w-12 {
   width: 3rem;
 }
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
 .w-8 {
   width: 2rem;
 }
 .w-16 {
   width: 4rem;
-}
-.w-min {
-  width: -moz-min-content;
-  width: min-content;
 }
 .w-1 {
   width: 0.25rem;
@@ -648,6 +648,10 @@ video {
 .p-4 {
   padding: 1rem;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .px-5p {
   padding-left: 5%;
   padding-right: 5%;
@@ -659,10 +663,6 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .pb-5p {
   padding-bottom: 5%;
@@ -700,6 +700,13 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* Custom CSS */
@@ -796,6 +803,27 @@ background-color: black;
 
 .scary-grid{
   grid-template-columns: min-content 1fr;
+}
+
+/* burger menu */
+
+.burger-menu{
+  position: absolute;
+  right: 3rem;
+  display: flex;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.bouncing-animation{
+  background-color: aqua;
+  animation: bounce 1s ease-in-out 0 infinite alternate;
+}
+
+@keyframes bounce {
+  from {translate: 0 0;}
+  to { translate: 0 -1rem;}
 }
 
 @media (min-width: 640px) {
