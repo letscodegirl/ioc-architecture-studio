@@ -128,7 +128,17 @@ background-color: black;
   animation: bounce 1s ease-in-out infinite alternate;
 }
 
+.pulse-animation{
+  /* background-color: aqua; */
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
 @keyframes bounce {
   from {translate: 0 0;}
   to { translate: 0 -1rem;}
+}
+
+@keyframes pulse {
+  from {scale:1;}
+  to { scale: 1.2}
 }

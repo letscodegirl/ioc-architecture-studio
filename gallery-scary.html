@@ -25,54 +25,9 @@ layout: default
     {% endfor %}
   </section>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
-<script src="gs"></script>
+
   <script>
-    let animatedImages = document.querySelectorAll('.gsap-Trigger')
-
-    animatedImages.forEach(img => {
-      let tl = gsap.timeline({
-        // duration: "2",
-        scrollTrigger: {
-            trigger: img,
-            start: "top bottom",
-            end: "bottom top",
-            toggleActions: "play none none none",
-            scrub: true,
-            markers: true,
-        },
-        marker: true
-        
-      })
-      .to(img, {scale: '1', filter: blur(0)})
-      .to(img, {scale: '1', filter: blur(0)})
-      .to(img, {scale: '.5',filter: blur(1)})
-
-    })
-
-    console.log('bob')
-
-    // let tl = gsap.timeline({scrollTrigger: {
-    //         trigger: this,
-    //         start: "top bottom-=100",
-    //         end: "bottom top+=100",
-    //         toggleActions: "play reset play reset"
-    //     }});
-    // tl.to("selector", {vars})
-    //        .to("selector", {toVars})
-    // gsap.to(".gsap-Trigger", {
-    //     duration: 1.5,
-    //     scale: 1,
-    //     autoAlpha: 1,
-    //     ease: "bounce.out",
-    //     scrollTrigger: {
-    //         trigger: this,
-    //         start: "top bottom-=100",
-    //         end: "bottom top+=100",
-    //         toggleActions: "play reset play reset"
-    //     }
-    // });
+   
   </script>
 
 
