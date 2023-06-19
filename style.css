@@ -18,6 +18,7 @@
 
 /* Custom CSS */
 
+
 :root {
   --dark: #353535
 }
@@ -114,23 +115,16 @@ background-color: black;
 
 /* burger menu */
 
-.burger-menu{
-  position: absolute;
-  right: 3rem;
-  display: flex;
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-}
 
-.bouncing-animation{
-  /* background-color: aqua; */
-  animation: bounce 1s ease-in-out infinite alternate;
-}
+
 
 .pulse-animation{
   /* background-color: aqua; */
   animation: pulse 1s ease-in-out infinite alternate;
+}
+
+.bouncing-animation{
+  animation: bounce 1s ease-in-out infinite alternate;
 }
 
 @keyframes bounce {

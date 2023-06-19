@@ -41,7 +41,7 @@ banner: true
     <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
       {% for prop in site.property limit:1 %}
       <div class="">
-        <h2 class="w-1">{{prop.title}}</h2>
+        <h2 class="w-1 scroll-in-from-bottom relative">{{prop.title}}</h2>
       </div>
       
       <div>
@@ -87,7 +87,7 @@ banner: true
 
   <section class="">
     <div class="grid md:grid-cols-2 pb-5p md:gap-16 max-w-screen-2xl mx-auto">
-      {% assign featured = site.property | where:'featured','true' %}
+      {% assign featured = site.property | where:'featured', 'true' %}
       {% for prop in featured limit:1 %}
       <div class="">
         <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10">Featured property</h2>
