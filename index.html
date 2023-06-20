@@ -2,9 +2,11 @@
 layout: default
 banner: true
 ---
-
+<!-- 3 col section with info -->
   <section class="">
     <div class="grid  md:grid-cols-3 gap-8 max-w-screen-2xl mx-auto">
+
+      <!-- used flex here so that the vertical text takes up a small amount of space and leaving the rest for the div with bg image -->
       <div class="flex">
         <p class="vertical-text px-2">
           baro architecture
@@ -13,6 +15,7 @@ banner: true
           <div class="w-8 h-8 bg-white absolute inline-block rounded-full bottom-8 right-8 pulse-animation"></div> 
         </div>
       </div>
+      <!-- col span 2 + coloumns 2 means that on desktop it will evenly break up the content between the 2 columns -->
       <div class="md:col-span-2 md:columns-2 gap-8">
         <h2 class="mb-0">Barō -</h2>
         <h3>Beyond the design</h3>
@@ -27,6 +30,7 @@ banner: true
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem ipsa voluptate, earum fugiat voluptatum in, soluta possimus aspernatur facere voluptatibus reiciendis, sit nesciunt pariatur iste quae ipsum perspiciatis culpa.
         </p>
+        <!-- arrow color is passed with the color variable -->
         <div class="mt-8 ml-auto w-min">
           <a href="#">
             {% include arrow.html color='#000' %}
@@ -37,9 +41,12 @@ banner: true
   </section>
 
 
+  <!-- first property  -->
   <section class="bg-[var(--dark)] text-white">
     <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
-      {% for prop in site.property limit:1 %}
+
+      {% assign sorted = site.property | sort: 'date' %}
+      {% for prop in sorted limit:1 %}
       <div class="">
         <h2 class="w-1 scroll-in-from-bottom relative">{{prop.title}}</h2>
       </div>
@@ -51,6 +58,8 @@ banner: true
         </div>
       </div>
     </div>
+
+    <!--  -->
     <div class="aspect-landscape-wide relative">
       <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
       <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full">
@@ -84,6 +93,8 @@ banner: true
     {% endfor %}
     
   </section>
+
+  <!-- first featured property -->
 
   <section class="">
     <div class="grid md:grid-cols-2 pb-5p md:gap-16 max-w-screen-2xl mx-auto">

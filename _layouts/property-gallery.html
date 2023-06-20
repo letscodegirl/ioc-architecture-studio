@@ -1,126 +1,99 @@
 ---
 layout: default
 ---
-<section class="">
-    <div class="grid md:grid-cols-2 items-end pb-5p gap-8  max-w-screen-2xl mx-auto">
-      <div class="">
-        <h2 class="w-1">{{page.title}}</h2>
+
+<section class="bg-center min-h-70 flex flex-col justify-between p-0" style="background-image: url({{page.featured_image}}); color: {{page.header-text-color}} ; ">
+  <header class="sticky top-0 px-5p p-8 border-black z-50">
+    <div class="flex justify-between max-w-screen-2xl w-full mx-auto">
+      <nav class="flex justify-start items-enter">
+        <div class="w-16 h-16 bg-black inline-block rounded-full" style="background-color:{{page.header-text-color}} ;"></div> <a href="/" class="logo ml-2">Barō architecture</a>
+      </nav>
+      <nav class="flex items-start doted-nav">
+        <a href="/about" class="p-4">about</a>
+        <a href="/portfolio" class="p-4">portfolio </a>
+        <a href="/gallery" class="p-4">gallery</a>
+      </nav>
+    </div>
+  </header>
+  <div class="flex justify-center relative bottom-[-3rem]">
+    <div class="-rotate-90 flex items-end gap-3">
+      <div class="rotate-180">
+        {% include arrow.html color='#000' %}
       </div>
-      
-      <div>
-        <h3>Brief</h3>  
-        <div class="md:columns-2 gap-8">
-          <p>{{page.brief}}</p>
-        </div>
+      <div class="w-8 h-8 bg-black inline-block rounded-full" style="background-color: {{page.header-text-color}};"></div>
+      <h1 class="inline text-7xl self-center leading-none !mb-[-18px] w-0">
+        {{page.title}}
+      </h1>
+
+    </div>
+  </div>
+</section>
+
+{% for sec in page.gallerySections %}
+<section class="px-[5vw] py-[6vw]">
+  <div class="max-w-screen-2xl mx-auto grid md:grid-cols-3 gap-x-[5vw] gap-y-[6vw] items-center">
+
+    <div class="col-span-full py-[3vw]">
+      <div class="aspect-landscape-wide relative">
+        <img src="{{sec.image-1-url}}" alt="{{sec.image-1-alt}}" class="img-overlay">
       </div>
     </div>
-    <div class="aspect-landscape-wide relative">
-      <img src="{{page.featured_image}}" alt="building" class="img-overlay">
-      <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full z-20">
-    </div>
-    </div>
-    </div>
-    <div class="flex gap-8 py-8 items-center">
-      <div>
-        <h3>
-          Date
-        </h3>
-        <p class="font-light text-sm">{{page.date | date_to_string}}</p>
-      </div>
-      <div>
-        <h3>
-          Cotractor
-        </h3>
-        <p class="font-light text-sm">{{page.contractor}}</p>
-      </div>
-      <div>
-        <h3>Principle Architect
-        </h3>
-        <p class="font-light text-sm">{{page.architect}}</p>
-      </div>
+    <div class="row-span-2">
+      <div class="aspect-portrait relative">
+        <img src="{{sec.image-2-url}}" alt="{{sec.image-2-alt}}" class="img-overlay">
       </div>
     </div>
     
-</section>
-
-<section>
-    <div class="grid md:grid-cols-3 pb-5p gap-8 md:gap-32 max-w-screen-2xl mx-auto items-start">
-        <div class="md:col-span-2">
-            <h3>
-                Breif Cont.
-            </h3>
-            <p class="md:columns-2 gap-8 col-span-2">
-                {{page.breif_continue}}
-            </p>
-        </div>
-        <div class="">
-            <h3>
-                Specifications
-            </h3>
-            <ul class="list-disc list-inside">
-                {% for item in page.specifications %}
-                    <li>{{item}}</li>
-                {% endfor %}
-            </ul>
-        </div>
+    <div class="pt-[6vw]">
+      <div class="aspect-landscape relative">
+        <img src="{{sec.image-3-url}}" alt="{{sec.image-3-alt}}" class="img-overlay">
+      </div>
     </div>
-</section>
-
-<section>
-    <div class="grid md:grid-cols-3 pb-5p gap-x-[4vw] max-w-screen-2xl mx-auto items-center relative">
-        <div class="[&>:nth-child(2n+1)]:aspect-[2/3] [&>:nth-child(2n)]:aspect-[3/2] grid gap-y-[10vw]">
-            {% for img in page.gallery limit: 3 %}
-            <div class="relative">
-                <img src="{{img}}" alt="building" class="img-overlay">
-            </div>
-            {% endfor %}
-        </div>
-        <div class="[&>:nth-child(2n)]:aspect-[2/3] [&>:nth-child(2n+1)]:aspect-[3/2] grid gap-y-[10vw]">
-            {% for img in page.gallery limit:3 offset:3 %}
-            <div class=" relative">
-                <img src="{{img}}" alt="building" class="img-overlay">
-              </div>
-              {% endfor %}
-        </div>
-        <div class="grid gap-y-[10vw]">
-            {% for img in page.gallery limit:2 offset:6 %}
-            <div class="aspect-[2/3] relative">
-                <img src="{{img}}" alt="building" class="img-overlay">
-              </div>
-              {% endfor %}
-        </div>
-        <div class="absolute bottom-0 right-0">
-    <a href="#" class="flex items-center">
-        <span class="pr-4">
-            Full Gallery
-        </span>
-        {% include arrow.html color='#000' %}
-    </a>
-
-        </div>
+    
+    <div class="pb-[6vw]">
+      <div class="line-clamp-6">
+        {{sec.text-1-html}}
+      </div>
     </div>
-</section>
 
-<section class="bg-[var(--dark)] text-white">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 pb-5p gap-8 md:gap-16 max-w-screen-2xl mx-auto">
-        <div class="lg:col-span-2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia iure voluptatum est laborum harum provident voluptas aperiam dolorum adipisci, ipsam repudiandae nulla, deleniti consectetur eum. Quasi minima consequuntur asperiores?</p>
-          </div>
-        <div class="flex items-start gap-4">
-          <div class="w-16 h-16 bg-white rounded-full mt-[1.2rem] hidden sm:block"></div>
-          <div class="flex-1">
-            <h2 class="">
-                See more of our portfolio
-            </h2>
-            <div class="flex items-center gap-4">
-              <p class="mb-0">Contact us</p>
-              <div class="flex-1 text-right">
-                {% include arrow.html color='#fff' %}
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div class="row-span-3 pt-[6vw]">
+      <div class="aspect-portrait relative">
+        <img src="{{sec.image-4-url}}" alt="{{sec.image-4-alt}}" class="img-overlay">
+      </div>
     </div>
-  </section>
+    <div class="row-span-3 pb-[6vw]">
+      <div class="aspect-portrait relative">
+        <img src="{{sec.image-5-url}}" alt="{{sec.image-5-alt}}" class="img-overlay">
+      </div>
+    </div>
+    <div class="row-span-2">
+      <div class="aspect-landscape relative">
+        <img src="{{sec.image-6-url}}" alt="{{sec.image-6-alt}}" class="img-overlay">
+      </div>
+    </div>
+    
+    <div class="">
+      <div class="">
+        {{sec.text-2-html}}
+      </div>
+    </div>
+
+    <div class="col-span-2 pt-[6vw]">
+      <div class="aspect-landscape-wide relative">
+        <img src="{{sec.image-4-url}}" alt="{{sec.image-4-alt}}" class="img-overlay">
+      </div>
+    </div>
+    <div class="col-span-2 pt-[6vw]">
+      <div class="aspect-landscape-wide relative">
+        <img src="{{sec.image-5-url}}" alt="{{sec.image-5-alt}}" class="img-overlay">
+      </div>
+    </div>
+    <div class="pt-[6vw]">
+      <div class="aspect-portrait relative">
+        <img src="{{sec.image-6-url}}" alt="{{sec.image-6-alt}}" class="img-overlay">
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endfor %}

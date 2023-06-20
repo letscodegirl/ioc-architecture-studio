@@ -7,44 +7,48 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+  <!-- optional banner -->
   {% if page.banner == true %}
   <section class="flex justify-center items-center bg-cover bg-center min-h-90" style="background-image: url(https://picsum.photos/id/1076/600/400);">
+    <!-- flex centered text box -->
     <div class="text-white">
       <h1 class="text-9xl mb-0">Barō</h1>
       <h3 class="text-right">Architecture</h3>
     </div>
+    <!-- slide out burger menu -->
     <div class="absolute bg-white top-5p right-5p w-12 h-12 rounded-full burger-button cursor-pointer">
       <nav class="burger-menu flex absolute top-0 h-full right-0 px-0 py-2 bg-white rounded-full w-0 overflow-hidden items-center ">
-        <a href="/about" class="px-4">about</a>
-        <a href="" class="px-4">portfolio</a>
-        <a href="/contact" class="px-4">contact</a>
-      </nav>
+          <a href="/about" class="p-4">about</a>
+          <a href="/portfolio" class="p-4">portfolio </a>
+          <a href="/gallery" class="p-4">gallery</a>
+        </nav>
     </div>
+    <!-- small bouncing dot at the bottom of the -->
     <div class="absolute bg-white bottom-5p left-[cacl(50% - 1rem)] w-8 h-8 rounded-full bouncing-animation">
     </div>
   </section>
-  <script>
-
-  </script>
   {% endif %}
+  <!-- sticky header -->
+  {% if page.unique-header != true %}
   <header class="sticky top-0 px-5p p-8 bg-white border-black z-50">
     <div class="flex justify-between max-w-screen-2xl mx-auto">
       <nav class="flex justify-start items-center">
         <div class="w-16 h-16 bg-black inline-block rounded-full"></div> <a href="/" class="logo ml-2">Barō architecture</a>
       </nav>
       <nav class="flex items-start doted-nav">
-        <a href="/about" class="p-4">about</a>
-        <a href="" class="p-4">portfolio <span class="text-gray-500 block w-min">gallery</span></a>
-        <a href="/contact" class="p-4">contact</a>
+          <a href="/about" class="p-4">about</a>
+          <a href="/portfolio" class="p-4">portfolio </a>
+          <a href="/gallery" class="p-4">gallery</a>
       </nav>
 
     </div>
   </header>
+{% endif %}
 
   {{content}}
 
   
-
+<!-- footer -->
   <footer class="">
     <div class="grid grid-cols-6 gap-8 pb-5p max-w-screen-2xl mx-auto items-center">
     <div>
@@ -81,10 +85,9 @@
       <h3>
         links
       </h3>
-      <a href="/">home</a>
-      <a href="/contact">contact</a>
-      <a href="/about">about</a>
-      <a href="/portfolio">portfolio</a>
+        <a href="/about" class="p-4">about</a>
+        <a href="/portfolio" class="p-4">portfolio </a>
+        <a href="/gallery" class="p-4">gallery</a>
     </div>
     <div>
       <h3>
