@@ -581,17 +581,14 @@ video {
 .h-5 {
   height: 1.25rem;
 }
-.min-h-90 {
-  min-height: 90vh;
+.min-h-100 {
+  min-height: 100vh;
 }
 .min-h-70 {
   min-height: 70vh;
 }
 .min-h-\[25vh\] {
   min-height: 25vh;
-}
-.min-h-100 {
-  min-height: 100vh;
 }
 .w-12 {
   width: 3rem;
@@ -808,14 +805,14 @@ video {
 .pl-4 {
   padding-left: 1rem;
 }
-.pb-5p {
-  padding-bottom: 5%;
-}
 .pt-\[6vw\] {
   padding-top: 6vw;
 }
 .pb-\[6vw\] {
   padding-bottom: 6vw;
+}
+.pb-5p {
+  padding-bottom: 5%;
 }
 .pr-4 {
   padding-right: 1rem;
@@ -844,12 +841,12 @@ video {
   font-size: 0.875rem;;
   line-height: 1.2;
 }
+.text-\[2rem\] {
+  font-size: 2rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 1;
-}
-.text-\[2rem\] {
-  font-size: 2rem;
 }
 .font-light {
   font-weight: 300;
@@ -866,6 +863,13 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 /* Custom CSS */
@@ -963,7 +967,7 @@ background-color: #000;
 }
 
 .vertical-text{
-  writing-mode:vertical-lr;
+  writing-mode:vertical-rl;
   rotate:180deg;
 }
 
