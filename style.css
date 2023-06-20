@@ -121,7 +121,7 @@ background-color: #000;
 }
 
 .scary-grid{
-  grid-template-columns: min-content auto;
+  grid-template-columns: 8rem auto;
 }
 
 /* burger menu */
