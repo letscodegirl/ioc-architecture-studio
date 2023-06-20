@@ -38,6 +38,15 @@ body > section, body footer{
   padding: 5%
 }
 
+footer p{
+  text-align: left;
+}
+
+footer a{
+  display: block;
+}
+
+
 .example-block {
     font-family: 'Noto Sans HK', sans-serif;
 }

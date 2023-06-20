@@ -19,20 +19,20 @@ banner: true
       <div class="md:col-span-2 md:columns-2 gap-8">
         <h2 class="mb-0">Barō -</h2>
         <h3 class="mb-8 text-3xl">Beyond the design</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
+        <p>With a rich history spanning decades, Baro Architecture has become synonymous with architectural excellence and a forward-thinking approach to the built environment.
         </p>
         
         <p>
-          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
-          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nam architecto in odio enim quibusdam, quod
-          eligendi non, ea aspernatur neque alias dolorem placeat? Aspernatur ipsum dolores voluptates adipisci perferendis.
+          Baro Architecture was founded by visionary architect, Alejandro Baro, who sought to challenge the conventional boundaries of design and create spaces that inspire and elevate the human experience. With a passion for blending artistry, functionality, and sustainability, Baro Architecture has left an indelible mark on the architectural landscape.
         </p>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae rem ipsa voluptate, earum fugiat voluptatum in, soluta possimus aspernatur facere voluptatibus reiciendis, sit nesciunt pariatur iste quae ipsum perspiciatis culpa.
+          Our team of talented architects and designers brings a diverse range of expertise and a shared commitment to pushing the boundaries of creativity. We believe that every project presents an opportunity to craft unique solutions that not only meet our clients' needs but also leave a lasting impact on communities and the environment.
+
         </p>
+        <p>
+          Baro Architecture's portfolio spans a wide range of projects, from awe-inspiring residential homes and commercial spaces to iconic cultural landmarks.
+        </p>
+
         <!-- arrow color is passed with the color variable -->
         <div class="mt-8 ml-auto w-20">
           <a href="#" class="block">
@@ -63,7 +63,7 @@ banner: true
     </div>
 
     <!--  -->
-    <div class="aspect-landscape-wide relative">
+    <div class="min-h-[20vh] relative">
       <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
       <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full">
       </div>
@@ -105,28 +105,34 @@ banner: true
       {% for prop in featured limit:1 %}
       <div class="">
         <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10">Featured property</h2>
+        <div class="px-12">
         <h3>{{prop.title}}</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident rem voluptatum enim. Assumenda officia quam commodi praesentium corporis est quos natus dolores eveniet suscipit animi, quas blanditiis, possimus ab iste.
-        </p>
-        <div class="flex items-center justify-between">
-          <span class="font-bold">see it</span>
-          {% include arrow.html color='#000' %}
-        </div>
-        <div class="text-right">
-          <h3 class="mb-0">
-            Date
-          </h3>
-          <span>{{prop.date | date_to_string}}</span>
-          <h3 class="mb-0">
-            Cotractor
-          </h3>
-          <span>{{prop.contractor}}</span>
-          <h3 class="mb-0">
-            Principle Architect
-          </h3>
-          <span>{{prop.architect}}</span>
-
+          <p>
+            {{prop.brief}}
+          </p>
+          <p>
+            {{prop.breif_continue_html}}
+          </p>
+          
+          <div class="flex items-center justify-between mt-6">
+            <span class="font-bold">see it</span>
+            {% include arrow.html color='#000' %}
+          </div>
+          <div class="text-right pt-12">
+            <h3 class="mb-0 mt-4">
+              Date
+            </h3>
+            <span class="">{{prop.date | date_to_string}}</span>
+            <h3 class="mb-0 mt-4">
+              Cotractor
+            </h3>
+            <span class="">{{prop.contractor}}</span>
+            <h3 class="mb-0 mt-4">
+              Principle Architect
+            </h3>
+            <span class="">{{prop.architect}}</span>
+            
+          </div>
         </div>
         
       </div>
@@ -142,9 +148,9 @@ banner: true
   <section class="bg-[var(--dark)] text-white">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 pb-5p gap-8 md:gap-16 max-w-screen-2xl mx-auto">
         <div class="flex items-start gap-4">
-          <div class="w-16 h-16 bg-white rounded-full mt-[1.2rem] hidden sm:block"></div>
+          <div class="w-16 h-16 bg-white rounded-full hidden sm:block"></div>
           <div class="flex-1">
-            <h2 class="">
+            <h2 class="text-[2rem]">
               Beyond the design
             </h2>
             <div class="flex items-center gap-4">
