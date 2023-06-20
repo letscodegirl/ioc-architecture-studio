@@ -590,6 +590,9 @@ video {
 .min-h-\[25vh\] {
   min-height: 25vh;
 }
+.min-h-100 {
+  min-height: 100vh;
+}
 .w-12 {
   width: 3rem;
 }
