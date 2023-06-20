@@ -12,7 +12,9 @@ banner: true
           baro architecture
         </p>
         <div class="grow relative aspect-portrait bg pb-[50%]" style="background-image: url('https://picsum.photos/id/1081/600/400');">
-          <div class="w-8 h-8 bg-white absolute inline-block rounded-full bottom-8 right-8 pulse-animation"></div> 
+          <div class="w-5 h-5 navpoint bg-white absolute inline-block rounded-full bottom-8 right-8 pulse-animation">
+            <div class="right-[1rem] absolute top-0 overflow-hidden w-0 sub-points block whitespace-nowrap">41°24'12.2"N 2°10'26.5"E</div>
+          </div> 
         </div>
       </div>
       <!-- col span 2 + coloumns 2 means that on desktop it will evenly break up the content between the 2 columns -->
@@ -63,12 +65,12 @@ banner: true
     </div>
 
     <!--  -->
-    <div class="min-h-[20vh] relative">
+    <div class="min-h-[25vh] relative">
       <img src="{{prop.featured_image}}" alt="building" class="img-overlay">
-      <div class="absolute bg-white top-6 right-6 w-6 h-6 rounded-full">
+      <div class="absolute bg-white top-6 right-6 w-4 h-4 rounded-full pulse-animation">
       </div>
     </div>
-    <div class="flex gap-8 py-8 items-center">
+    <div class="flex gap-16 py-8 items-center">
       <div>
         <h3>
           Date
@@ -104,7 +106,7 @@ banner: true
       {% assign featured = site.property | where:'featured', 'true' %}
       {% for prop in featured limit:1 %}
       <div class="">
-        <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10">Featured property</h2>
+        <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10 scroll-in-from-left">Featured property</h2>
         <div class="px-12">
         <h3>{{prop.title}}</h3>
           <p>
@@ -137,7 +139,7 @@ banner: true
         
       </div>
       <div class="mt-8 md:mt-32 flex items-stretch">
-        <div class="grow bg-cover bg-center pb-[50%]" style="background-image: url('{{prop.featured_image}}');"></div>
+        <div class="grow bg-cover bg-center pb-[50%] scroll-in-from-bottom" style="background-image: url('{{prop.featured_image}}');"></div>
         <p class="vertical-text px-4">Barō Architecture</p>
       </div>
     {% endfor %}
@@ -148,12 +150,12 @@ banner: true
   <section class="bg-[var(--dark)] text-white">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 max-w-screen-2xl mx-auto">
         <div class="flex items-start gap-4">
-          <div class="w-16 h-16 bg-white rounded-full hidden sm:block"></div>
+          <div class="w-16 h-16 bg-white rounded-full hidden sm:block scroll-in-from-left"></div>
           <div class="flex-1">
-            <h2 class="text-[2rem]">
+            <h2 class="text-[2rem] scroll-in-from-bottom">
               Beyond the design
             </h2>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 scroll-in-from-bottom-left">
               <p class="mb-0">Contact us</p>
               <div class="flex-1 text-right">
                 {% include arrow.html color='#fff' %}

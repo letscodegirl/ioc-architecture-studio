@@ -75,6 +75,8 @@ h1,h2,h3,h4,h5,h6{
 p{
   text-align: justify;
   margin-bottom: 1.5em;
+  line-height: 1.1;
+  font-size: .9rem;
 }
 :is(h1,h2,h3,h4,h5,h6,p):last-child{
   margin-bottom: 0;
@@ -95,16 +97,16 @@ header a{
 .doted-nav a::after{
 content: " ";
 position: absolute;
-bottom: -10px;
-left: calc(50% - 2px);
-width: 6px;
-height: 6px;
+bottom: -5px;
+left: calc(50% - 4px);
+width: 8px;
+height: 8px;
 border: 1px solid;
 border-radius: 100px;
-background-color: black;
+background-color: #000;
 }
 
-.doted-nav a:nth-child(2)::after{
+.doted-nav a:hover::after{
   background-color: #fff;
 }
 
@@ -126,12 +128,13 @@ background-color: black;
 
 
 
-
 .pulse-animation{
   /* background-color: aqua; */
   animation: pulse 1s ease-in-out infinite alternate;
 }
-
+.pulse-animation:hover{
+  animation-play-state: paused;
+}
 .bouncing-animation{
   animation: bounce 1s ease-in-out infinite alternate;
 }
