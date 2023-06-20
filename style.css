@@ -124,7 +124,30 @@ background-color: #000;
   grid-template-columns: 8rem auto;
 }
 
-/* burger menu */
+/* bouncing animation */
 
+.bouncing-animation{
+  animation: bounce 1s ease-in-out infinite alternate;
+}
 
+@keyframes bounce {
+  from {
+    translate: 0 0;
+  }
+  to { 
+    translate: 0 -1rem;
+  }
+}
 
+.pulse-animation{
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    scale: 1.3;
+  }
+  to { 
+    scale:.95;
+  }
+}
