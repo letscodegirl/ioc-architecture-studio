@@ -143,7 +143,7 @@ bottomUp.forEach(object => {
       scrollTrigger: {
           trigger: object,
           start: "top bottom",
-          end: "top 95%",
+          end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
           markers: true,
@@ -171,7 +171,7 @@ bottomUp.forEach(object => {
       scrollTrigger: {
           trigger: object,
           start: "top bottom",
-          end: "top 95%",
+          end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
           markers: true,
@@ -199,7 +199,7 @@ objectsRight.forEach(object => {
       scrollTrigger: {
           trigger: object,
           start: "top bottom",
-          end: "top 95%",
+          end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
           markers: true,
@@ -225,7 +225,7 @@ objectsRight.forEach(object => {
       scrollTrigger: {
           trigger: object,
           start: "top bottom",
-          end: "top 90%",
+          end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
           markers: true,
