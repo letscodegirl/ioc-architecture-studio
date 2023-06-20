@@ -17,10 +17,11 @@
     </div>
     <!-- slide out burger menu -->
     <div class="absolute bg-white top-5p right-5p w-12 h-12 rounded-full burger-button cursor-pointer">
-      <nav class="burger-menu flex absolute top-0 h-full right-0 px-0 py-2 bg-white rounded-full w-0 overflow-hidden items-center ">
-          <a href="/about" class="p-4">about</a>
+      <nav class="burger-menu flex absolute top-0 h-full right-0 bg-white rounded-full w-0 overflow-hidden items-center ">
+          <!-- <a href="/about" class="p-4">about</a> -->
           <a href="/portfolio" class="p-4">portfolio </a>
           <a href="/gallery" class="p-4">gallery</a>
+          <span class="p-4"> X </span>
         </nav>
     </div>
     <!-- small bouncing dot at the bottom of the -->
@@ -33,10 +34,13 @@
   <header class="sticky top-0 px-5p p-8 bg-white border-black z-50">
     <div class="flex justify-between max-w-screen-2xl mx-auto">
       <nav class="flex justify-start items-center">
-        <div class="w-16 h-16 bg-black inline-block rounded-full"></div> <a href="/" class="logo ml-2">Barō architecture</a>
+        <a href="/" class="logo ml-2 flex items-center">
+        <div class="w-16 h-16 bg-black inline-block rounded-full"></div> 
+          <span class="pl-4">Barō architecture</span>
+        </a>
       </nav>
       <nav class="flex items-start doted-nav">
-          <a href="/about" class="p-4">about</a>
+          <!-- <a href="/about" class="p-4">about</a> -->
           <a href="/portfolio" class="p-4">portfolio </a>
           <a href="/gallery" class="p-4">gallery</a>
       </nav>

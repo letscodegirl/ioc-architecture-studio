@@ -13,7 +13,6 @@ function toggleBurgerMenu() {
     gsap.to(burgerMenu, {
         width: 0,
         opacity: 0,
-        padding: '2px 0',
     })
 } else {
     console.log('no has active')
@@ -22,7 +21,6 @@ function toggleBurgerMenu() {
     gsap.to(burgerMenu, {
         width: "auto",
         opacity: 1,
-        padding: '2px 1.5rem'
         
     })
   }
@@ -115,7 +113,7 @@ headings.forEach(object => {
       scrollTrigger: {
           trigger: object,
           start: "top bottom",
-          end: "top center",
+          end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
           markers: true,
