@@ -146,7 +146,7 @@ bottomUp.forEach(object => {
           end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
-          markers: true,
+          markers: false,
       }
     }).from(object,{
         bottom:-300,
@@ -174,7 +174,7 @@ bottomUp.forEach(object => {
           end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
-          markers: true,
+          markers: false,
       }
     }).from(object,{
         left:-300,
@@ -202,7 +202,7 @@ objectsRight.forEach(object => {
           end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
-          markers: true,
+          markers: false,
       }
     }).from(object,{
         right:-300,
@@ -228,7 +228,7 @@ objectsRight.forEach(object => {
           end: "top 75%",
           toggleActions: "play none none none",
           scrub: true,
-          markers: true,
+          markers: false,
       }
     }).from(object,{
         left:-300,
