@@ -108,7 +108,7 @@ navPoints.forEach(point => {
 
 
 
-// scary galery code
+// scary gallery code
 
 let animatedImages = document.querySelectorAll('.gallery-scroll')
 

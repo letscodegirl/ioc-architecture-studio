@@ -584,9 +584,6 @@ video {
 .min-h-100 {
   min-height: 100vh;
 }
-.min-h-70 {
-  min-height: 70vh;
-}
 .min-h-\[25vh\] {
   min-height: 25vh;
 }
@@ -611,6 +608,9 @@ video {
 .w-6 {
   width: 1.5rem;
 }
+.w-32 {
+  width: 8rem;
+}
 .w-4 {
   width: 1rem;
 }
@@ -622,9 +622,6 @@ video {
 }
 .w-\[150\%\] {
   width: 150%;
-}
-.w-32 {
-  width: 8rem;
 }
 .max-w-screen-2xl {
   max-width: 1536px;
