@@ -16,12 +16,12 @@ function toggleBurgerMenu() {
     })
 } else {
     console.log('no has active')
-    
+
     burgerButton.classList.add("active")
     gsap.to(burgerMenu, {
         width: "auto",
         opacity: 1,
-        
+
     })
   }
 }
@@ -80,7 +80,7 @@ navPoints.forEach(point => {
 //         y:'-100',
 //         opacity:0,
 //         stagger: .25
-//     }).to(".burger-menu", {       
+//     }).to(".burger-menu", {
 //         width: 0,
 //         duration: 1
 //     })
@@ -158,9 +158,9 @@ bottomUp.forEach(object => {
     // })
   })
 
-  
+
   const objectsLeft = document.querySelectorAll(".scroll-in-from-left")
-  
+
   objectsLeft.forEach(object => {
     gsap.set(object,{
       position: 'relative'

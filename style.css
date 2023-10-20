@@ -148,3 +148,18 @@ background-color: #000;
   from {scale:1;}
   to { scale: 1.2}
 }
+
+.md:hidden {
+  display: none;
+}
+
+.sm:hidden {
+  display: none;
+}
+
+/* media queries */
+@media (max-width: 640px) {
+  .md:hidden {
+    display: none;
+  }
+}
