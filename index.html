@@ -1,6 +1,6 @@
 ---
-layout: default
-banner: true
+ layout: default
+ banner: true
 ---
 <!-- 3 col section with info -->
   <section class="">
@@ -14,7 +14,7 @@ banner: true
         <div class="grow relative aspect-portrait bg pb-[50%]" style="background-image: url('https://picsum.photos/id/1081/600/400');">
           <div class="w-5 h-5 navpoint bg-white absolute inline-block rounded-full bottom-8 right-8 pulse-animation">
             <div class="right-[1rem] absolute top-0 overflow-hidden w-0 sub-points block whitespace-nowrap">41°24'12.2"N 2°10'26.5"E</div>
-          </div> 
+          </div>
         </div>
       </div>
       <!-- col span 2 + coloumns 2 means that on desktop it will evenly break up the content between the 2 columns -->
@@ -23,7 +23,7 @@ banner: true
         <h3 class="mb-8 text-3xl">Beyond the design</h3>
         <p>With a rich history spanning decades, Baro Architecture has become synonymous with architectural excellence and a forward-thinking approach to the built environment.
         </p>
-        
+
         <p>
           Baro Architecture was founded by visionary architect, Alejandro Baro, who sought to challenge the conventional boundaries of design and create spaces that inspire and elevate the human experience. With a passion for blending artistry, functionality, and sustainability, Baro Architecture has left an indelible mark on the architectural landscape.
         </p>
@@ -55,9 +55,9 @@ banner: true
       <div class="">
         <h2 class="w-1 scroll-in-from-bottom relative">{{prop.title}}</h2>
       </div>
-      
+
       <div>
-        <h3>Brief</h3>  
+        <h3>Brief</h3>
         <div class="md:columns-2 gap-8">
           <p>{{prop.brief}}</p>
         </div>
@@ -96,7 +96,7 @@ banner: true
       </div>
     </div>
     {% endfor %}
-    
+
   </section>
 
   <!-- first featured property -->
@@ -115,7 +115,7 @@ banner: true
           <p>
             {{prop.breif_continue_html}}
           </p>
-          
+
           <div class="flex items-center justify-between mt-6">
             <span class="font-bold">see it</span>
             {% include arrow.html color='#000' %}
@@ -133,10 +133,10 @@ banner: true
               Principle Architect
             </h3>
             <span class="">{{prop.architect}}</span>
-            
+
           </div>
         </div>
-        
+
       </div>
       <div class="mt-8 md:mt-32 flex items-stretch">
         <div class="grow bg-cover bg-center pb-[50%] scroll-in-from-bottom" style="background-image: url('{{prop.featured_image}}');"></div>
