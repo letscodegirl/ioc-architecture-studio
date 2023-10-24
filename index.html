@@ -106,7 +106,7 @@
       {% assign featured = site.property | where:'featured', 'true' %}
       {% for prop in featured limit:1 %}
       <div class="">
-        <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10 scroll-in-from-left md:hidden"> Featured property</h2>
+        <h2 class="text-9xl w-[150%] mb-16 capitalize relative z-10 scroll-in-from-left hide-sm"> Featured property</h2>
         <div class="px-12">
         <h3>{{prop.title}}</h3>
           <p>
@@ -121,7 +121,7 @@
             {% include arrow.html color='#000' %}
           </div>
           <div class="text-right pt-12">
-            <h3 class="mb-0 mt-4 sm:hidden">
+            <h3 class="mb-0 mt-4 hide-sm">
               Date
             </h3>
             <span class="">{{prop.date | date_to_string}}</span>
